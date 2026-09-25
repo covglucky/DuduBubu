@@ -1,0 +1,3329 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>TĐ ❤️ NA</title>
+
+
+<style>
+/* ===================================
+   BIRTHDAY START SCREEN
+=================================== */
+
+#startScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 500;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffd6e7,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #ffe9b8,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f6,
+            #ffe4ef
+        );
+
+    overflow: hidden;
+}
+
+
+/* ===================================
+   CARD
+=================================== */
+
+.birthdayCard {
+
+    position: relative;
+
+    width: min(92vw, 460px);
+
+    min-height: 650px;
+
+    padding: 40px 30px 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.96);
+
+    border-radius: 35px;
+
+    border: 5px solid #ffd1e2;
+
+    box-shadow:
+        0 20px 60px rgba(255, 105, 155, 0.25),
+        inset 0 0 0 2px #fff5f9;
+
+    overflow: hidden;
+
+    animation: cardAppear 0.8s ease;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* ===================================
+   DECORATIONS
+=================================== */
+
+.cardDecor {
+
+    position: absolute;
+
+    font-size: 32px;
+
+    user-select: none;
+
+    pointer-events: none;
+}
+
+
+.decor1 {
+    top: 18px;
+    left: 25px;
+
+    animation: balloonFloat 3s ease-in-out infinite;
+}
+
+.decor2 {
+    top: 20px;
+    right: 25px;
+
+    animation: balloonFloat 3s ease-in-out infinite 0.8s;
+}
+
+.decor3 {
+    top: 95px;
+    right: 25px;
+
+    font-size: 28px;
+
+    transform: rotate(15deg);
+}
+
+.decor4 {
+    bottom: 95px;
+    left: 25px;
+
+    animation: sparkle 1.5s infinite;
+}
+
+.decor5 {
+    bottom: 120px;
+    right: 25px;
+
+    animation: sparkle 1.8s infinite;
+}
+
+
+@keyframes balloonFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+@keyframes sparkle {
+
+    0%,100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+}
+
+
+/* ===================================
+   TEXT
+=================================== */
+
+.smallTitle {
+
+    color: #ff7ba9;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.birthdayTitle {
+
+    margin: 0;
+
+    color: #ff5f96;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    text-shadow:
+        2px 2px 0 #ffd5e4;
+}
+
+
+.nameTitle {
+
+    margin-top: 5px;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #444;
+}
+
+
+/* ===================================
+   INTRO IMAGE
+=================================== */
+
+.introImage {
+
+    display: block;
+
+    width: 175px;
+
+    height: 175px;
+
+    object-fit: contain;
+
+    margin: 18px auto 12px;
+
+    animation:
+        introFloat 3s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 8px 10px rgba(0,0,0,0.12)
+        );
+}
+
+
+@keyframes introFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+/* ===================================
+   MESSAGE
+=================================== */
+
+.birthdayMessage {
+
+    max-width: 350px;
+
+    margin: 8px 0;
+
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.55;
+}
+
+
+.birthdayHint {
+
+    margin: 5px 0 20px;
+
+    color: #ff6f9f;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+/* ===================================
+   START BUTTON
+=================================== */
+
+.startButton {
+
+    border: none;
+
+    padding: 15px 55px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff75a8,
+            #ff4f91
+        );
+
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(255, 79, 145, 0.3);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.startButton:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(255, 79, 145, 0.4);
+}
+
+
+.startButton:active {
+
+    transform: scale(0.94);
+
+}
+
+
+/* ===================================
+   BOTTOM
+=================================== */
+
+.bottomText {
+
+    margin-top: 22px;
+
+    font-size: 14px;
+
+    color: #aaa;
+
+    letter-spacing: 1px;
+}
+
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:600px) {
+
+    .birthdayCard {
+
+        min-height: 600px;
+
+        padding:
+            35px
+            20px
+            25px;
+    }
+
+
+    .birthdayTitle {
+
+        font-size: 36px;
+    }
+
+
+    .nameTitle {
+
+        font-size: 27px;
+    }
+
+
+    .introImage {
+
+        width: 145px;
+        height: 145px;
+
+        margin-top: 15px;
+    }
+
+
+    .birthdayMessage {
+
+        font-size: 16px;
+    }
+
+
+    .startButton {
+
+        padding: 14px 48px;
+    }
+
+}
+#timer {
+    position: absolute;
+
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 30;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    padding: 8px 20px;
+
+    border-radius: 25px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    white-space: nowrap;
+}
+
+#timeLeft {
+    font-size: 22px;
+    font-weight: bold;
+}
+.timerDanger {
+    animation: timerShake 0.4s infinite;
+}
+
+@keyframes timerShake {
+
+    0%, 100% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+}
+.introImage {
+    display: block;
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: contain;
+
+    margin: 15px auto 20px;
+
+    animation: introImageFloat 2s ease-in-out infinite;
+}
+
+@keyframes introImageFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+}
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+
+    background: #ffeef5;
+}
+
+
+/* =========================
+   GAME
+========================= */
+
+#game {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image:
+        url("images/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   START SCREEN
+========================= */
+
+#startScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-image:
+        url("images/start-background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+.startBox {
+
+    width: min(90%, 450px);
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0,0,0,0.15);
+}
+
+
+.startTitle {
+
+    font-size: 42px;
+
+    color: #ff5f98;
+
+    margin-bottom: 15px;
+}
+
+
+.startSubtitle {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+.startButton {
+
+    border: none;
+
+    padding: 15px 45px;
+
+    border-radius: 30px;
+
+    background: #ff6fa5;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px
+        rgba(255,111,165,0.35);
+}
+
+
+.startButton:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+#questionBox {
+
+    position: absolute;
+
+    top: 70px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 20;
+
+    width: min(90%, 600px);
+
+    padding: 12px 20px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,0.12);
+}
+
+
+#levelText {
+
+    font-size: 15px;
+
+    color: #ff6fa5;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+#questionText {
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    font-weight: bold;
+
+    color: #444;
+}
+
+
+/* =========================
+   TOP UI
+========================= */
+
+
+#topUI {
+
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 20;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,0.15);
+}
+
+
+/* =========================
+   BUBU
+========================= */
+
+#bubu {
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    object-fit: contain;
+
+    left: 10%;
+    top: 75%;
+
+    z-index: 10;
+
+    transition:
+        left 0.12s linear,
+        top 0.12s linear;
+}
+
+
+/* =========================
+   DUDU
+========================= */
+
+#dudu {
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    object-fit: contain;
+
+    left: 80%;
+    top: 15%;
+
+    z-index: 9;
+
+    display: none;
+
+    transition:
+        left 1.5s ease,
+        top 1.5s ease;
+
+    animation:
+        duduAppear
+        1s ease;
+}
+
+
+@keyframes duduAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.5);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* =========================
+   CHOICE IMAGES
+========================= */
+
+.choice {
+
+    position: absolute;
+
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: contain;
+
+    z-index: 5;
+
+    animation:
+        floating
+        2s
+        infinite
+        ease-in-out;
+}
+
+
+@keyframes floating {
+
+    0%,100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+/* =========================
+   CHOICE POSITIONS
+========================= */
+
+#choice1 {
+
+    left: 22%;
+
+    top: 35%;
+}
+
+
+#choice2 {
+
+    left: 50%;
+
+    top: 42%;
+}
+
+
+#choice3 {
+
+    left: 75%;
+
+    top: 30%;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+#controls {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    z-index: 30;
+
+    display: grid;
+
+    grid-template-columns:
+        60px 60px 60px;
+
+    grid-template-rows:
+        60px 60px;
+
+    gap: 5px;
+}
+
+
+.control {
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    font-size: 25px;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0,0,0,0.15);
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+}
+
+
+.control:active {
+
+    transform:
+        scale(0.9);
+}
+
+
+.up {
+
+    grid-column: 2;
+}
+
+
+.left {
+
+    grid-column: 1;
+
+    grid-row: 2;
+}
+
+
+.down {
+
+    grid-column: 2;
+
+    grid-row: 2;
+}
+
+
+.right {
+
+    grid-column: 3;
+
+    grid-row: 2;
+}
+
+
+/* =========================
+   POPUP
+========================= */
+
+#popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(0,0,0,0.45);
+}
+
+
+.popupBox {
+
+    width:
+        min(90%,420px);
+
+    background:
+        white;
+
+    padding:
+        30px;
+
+    border-radius:
+        25px;
+
+    text-align:
+        center;
+
+    box-shadow:
+        0 10px 40px
+        rgba(0,0,0,0.25);
+
+    animation:
+        popupShow
+        0.4s ease;
+}
+
+
+@keyframes popupShow {
+
+    from {
+
+        transform:
+            scale(0.7);
+
+        opacity: 0;
+    }
+
+    to {
+
+        transform:
+            scale(1);
+
+        opacity: 1;
+    }
+}
+
+
+#popupIcon {
+
+    width: 110px;
+
+    height: 110px;
+
+    object-fit: contain;
+    
+    display: block;
+
+    margin: 0 auto 15px;
+}
+
+#rewardImage {
+
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: contain;
+
+    display: none;
+
+    margin: 10px auto 20px;
+
+    animation: giftShow 0.8s ease;
+}
+
+
+#popupText {
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    white-space: pre-line;
+
+    margin-bottom: 25px;
+}
+
+
+.mainButton {
+
+    border: none;
+
+    background:
+        #ff6fa5;
+
+    color:
+        white;
+
+    padding:
+        13px 25px;
+
+    border-radius:
+        25px;
+
+    font-size:
+        17px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+}
+
+
+/* =========================
+   GIFT
+========================= */
+
+#giftImage {
+
+    width:
+        220px;
+
+    max-width:
+        80%;
+
+    max-height:
+        280px;
+
+    object-fit:
+        contain;
+
+    margin:
+        10px auto 20px;
+
+    display:
+        none;
+
+    animation:
+        giftShow
+        0.8s ease;
+}
+
+
+@keyframes giftShow {
+
+    0% {
+
+        transform:
+            scale(0.3)
+            rotate(-10deg);
+
+        opacity:
+            0;
+    }
+
+    70% {
+
+        transform:
+            scale(1.1)
+            rotate(5deg);
+    }
+
+    100% {
+
+        transform:
+            scale(1)
+            rotate(0);
+
+        opacity:
+            1;
+    }
+}
+
+
+/* =========================
+   FINAL SCREEN
+========================= */
+
+#finalScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 200;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255,231,241,0.97);
+}
+
+
+.finalBox {
+
+    width:
+        min(90%,500px);
+
+    text-align:
+        center;
+
+    padding:
+        30px;
+}
+
+
+.finalHeart {
+
+    font-size:
+        60px;
+
+    margin-bottom:
+        10px;
+
+    animation:
+        heartBeat
+        1s
+        infinite;
+}
+
+
+@keyframes heartBeat {
+
+    0%,100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.2);
+    }
+}
+
+
+.finalBox h1 {
+
+    font-size:
+        34px;
+
+    color:
+        #ff4d91;
+
+    margin-bottom:
+        15px;
+}
+
+
+.finalBox p {
+
+    font-size:
+        19px;
+
+    line-height:
+        1.7;
+
+    color:
+        #444;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    #bubu {
+
+        width:
+            65px;
+
+        height:
+            65px;
+    }
+
+
+    #dudu {
+
+        width:
+            70px;
+
+        height:
+            70px;
+    }
+
+
+    .choice {
+
+        width:
+            55px;
+
+        height:
+            55px;
+    }
+
+
+    #questionBox {
+
+        top:
+            62px;
+
+        padding:
+            10px 14px;
+    }
+
+
+    #questionText {
+
+        font-size:
+            16px;
+    }
+
+
+    #controls {
+
+        bottom:
+            15px;
+
+        left:
+            15px;
+
+        grid-template-columns:
+            55px 55px 55px;
+
+        grid-template-rows:
+            55px 55px;
+    }
+
+
+    .control {
+
+        font-size:
+            22px;
+    }
+
+
+    #popupText {
+
+        font-size:
+            18px;
+    }
+
+
+    .startTitle {
+
+        font-size:
+            34px;
+    }
+.correctTitle {
+    margin-top: 22px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.wishMessage {
+    margin-top: 18px;
+    font-size: 19px;
+    line-height: 1.6;
+}
+/* ===================================
+   FINAL BIRTHDAY SCREEN
+=================================== */
+
+#finalScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 200;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffd8e8,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #ffe9b8,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f6,
+            #ffe4ef
+        );
+
+    overflow: hidden;
+}
+
+
+/* ===================================
+   FINAL CARD
+=================================== */
+
+.finalCard {
+
+    position: relative;
+
+    width: min(92vw, 500px);
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.96);
+
+    border-radius: 35px;
+
+    border: 5px solid #ffd1e2;
+
+    box-shadow:
+        0 20px 60px rgba(255,105,155,0.25),
+        inset 0 0 0 2px #fff5f9;
+
+    animation: finalCardAppear 1s ease;
+}
+
+
+@keyframes finalCardAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* ===================================
+   DECORATION
+=================================== */
+
+.finalDecor {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    pointer-events: none;
+}
+
+
+.finalDecor1 {
+
+    top: 20px;
+    left: 25px;
+
+    animation: finalFloat 2s infinite ease-in-out;
+}
+
+
+.finalDecor2 {
+
+    top: 25px;
+    right: 25px;
+
+    animation: finalFloat 2.5s infinite ease-in-out;
+}
+
+
+.finalDecor3 {
+
+    bottom: 30px;
+    left: 25px;
+
+    animation: finalFloat 2.2s infinite ease-in-out;
+}
+
+
+.finalDecor4 {
+
+    bottom: 30px;
+    right: 25px;
+
+    animation: finalFloat 2.8s infinite ease-in-out;
+}
+
+
+@keyframes finalFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* ===================================
+   HEART
+=================================== */
+
+.finalHeart {
+
+    font-size: 58px;
+
+    margin-bottom: 5px;
+
+    animation: heartBeat 1.2s infinite;
+}
+
+
+@keyframes heartBeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+
+}
+
+
+/* ===================================
+   TITLE
+=================================== */
+
+.finalCard h1 {
+
+    margin: 5px 0 15px;
+
+    color: #ff5f96;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 38px;
+
+    text-shadow:
+        2px 2px 0 #ffd5e4;
+}
+
+
+/* ===================================
+   MESSAGE
+=================================== */
+
+.finalMessage {
+
+    margin: 0 auto 18px;
+
+    max-width: 390px;
+
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+}
+
+
+/* ===================================
+   FINAL IMAGE
+=================================== */
+
+#finalImage {
+
+    display: block;
+
+    width: 230px;
+
+    height: 230px;
+
+    margin: 15px auto 20px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    filter:
+        drop-shadow(
+            0 10px 15px rgba(0,0,0,0.15)
+        );
+
+    animation: finalImageAppear 1s ease 0.3s both;
+}
+
+
+@keyframes finalImageAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.5)
+            rotate(-5deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+
+}
+
+
+/* ===================================
+   LOVE
+=================================== */
+
+.finalLove {
+
+    margin-top: 5px;
+
+    color: #ff6f9f;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:600px) {
+
+    .finalCard {
+
+        padding:
+            30px
+            20px;
+    }
+
+
+    .finalCard h1 {
+
+        font-size: 34px;
+    }
+
+
+    .finalMessage {
+
+        font-size: 16px;
+    }
+
+
+    #finalImage {
+
+        width: 190px;
+
+        height: 190px;
+    }
+
+}số
+
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     START / BIRTHDAY CARD
+========================= -->
+
+<div id="startScreen">
+
+    <div class="birthdayCard">
+
+        <!-- Trang trí -->
+        <div class="cardDecor decor1">🎈</div>
+        <div class="cardDecor decor2">🎈</div>
+        <div class="cardDecor decor3">🎀</div>
+        <div class="cardDecor decor4">✨</div>
+        <div class="cardDecor decor5">✨</div>
+
+
+        <!-- Tiêu đề nhỏ -->
+        <div class="smallTitle">
+            💌 Chúc bé Ánh ngày sinh nhật thật ấm áp 💌
+        </div>
+
+
+        <!-- Tên -->
+        <h1 class="birthdayTitle">
+            ThanhĐỗ ❤️ NgọcÁnh
+        </h1>
+
+
+        <!-- Ảnh intro -->
+        <img
+            class="introImage"
+            src="images/intro.png"
+            alt="Dudu và Bubu"
+        >
+
+
+        <!-- Nội dung lời chúc / luật chơi -->
+        <div class="birthdayMessage">
+
+            <strong>
+                BẠN CHÚC EM BÉ CỦA BẠN
+                MỘT NGÀY SINH NHẬT THẬT Ý NGHĨA
+            </strong>
+
+            <br><br>
+
+            <strong>Luật chơi:</strong>
+
+            <br>
+
+            Bé hãy di chuyển BuBu tới đáp án
+            cho từng câu hỏi 
+
+            <br><br>
+
+            Mỗi câu trả lời đúng bé sẽ nhận được
+            1 phần quà mà bạn đã chuẩn bị 
+
+            <br><br>
+
+            Bé hãy tự mình
+            tìm ra câu trả lời mỗi màn nhé. 💕
+            
+        </div>
+
+
+        <!-- Dòng gợi tò mò -->
+        <div class="birthdayHint">
+             6 món quà đang chờ bé khám phá
+        </div>
+
+
+        <!-- Nút bắt đầu -->
+        <button
+            class="startButton"
+            onclick="startGame()"
+        >
+            START ❤️
+        </button>
+
+
+        <!-- Chữ cuối thiệp -->
+        <div class="bottomText">
+            Chúc bé thật vui và có 1 ngày sinh nhật thật ý nghĩa cùng bạn
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     GAME
+========================= -->
+
+<div id="game">
+
+
+    <!-- TOP -->
+
+    <div id="topUI">
+
+        ❤️ Màn
+
+        <span id="levelNumber">
+            1
+        </span>
+
+        /6
+
+    </div>
+<div id="timer">
+    ⏰ <span id="timeLeft">20</span>s
+</div>
+
+
+
+    <!-- QUESTION -->
+
+    <div id="questionBox">
+
+        <div id="levelText">
+
+            CÂU HỎI
+
+        </div>
+
+
+        <div id="questionText">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- BUBU -->
+
+    <img
+        id="bubu"
+        src="images/bubu.png"
+        alt="Bubu"
+    >
+
+
+
+    <!-- DUDU -->
+
+    <img
+        id="dudu"
+        src="images/dudu.png"
+        alt="Dudu"
+    >
+
+
+
+    <!-- CHOICES -->
+
+    <img
+        id="choice1"
+        class="choice"
+        src=""
+        alt=""
+    >
+
+
+    <img
+        id="choice2"
+        class="choice"
+        src=""
+        alt=""
+    >
+
+
+    <img
+        id="choice3"
+        class="choice"
+        src=""
+        alt=""
+    >
+
+
+
+    <!-- CONTROLS -->
+
+    <div id="controls">
+
+
+        <button
+            class="control up"
+            onclick="move('up')"
+        >
+
+            ⬆️
+
+        </button>
+
+
+        <button
+            class="control left"
+            onclick="move('left')"
+        >
+
+            ⬅️
+
+        </button>
+
+
+        <button
+            class="control down"
+            onclick="move('down')"
+        >
+
+            ⬇️
+
+        </button>
+
+
+        <button
+            class="control right"
+            onclick="move('right')"
+        >
+
+            ➡️
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     POPUP
+========================= -->
+
+<div id="popup">
+
+
+    <div class="popupBox">
+
+
+        <img
+            id="popupIcon"
+            src="images/heart.png"
+            alt=""
+        >
+
+
+        <div id="popupText"></div>
+
+        <img
+           id="rewardImage"
+           src="images/reward.png"
+           alt="Phần quà của bubu"
+        >
+
+
+        <img
+            id="giftImage"
+            src="images/gift.png"
+            alt="Món quà"
+        >
+
+
+        <button
+            id="continueButton"
+            class="mainButton"
+        >
+
+            Tiếp tục ❤️
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     FINAL SCREEN
+========================= -->
+
+<div id="finalScreen">
+
+    <div class="finalCard">
+
+        <!-- Trang trí -->
+        <div class="finalDecor finalDecor1">✨</div>
+        <div class="finalDecor finalDecor2">✨</div>
+        <div class="finalDecor finalDecor3">💕</div>
+        <div class="finalDecor finalDecor4">🌸</div>
+
+
+        <div class="finalHeart">
+            ❤️
+        </div>
+
+
+        <h1>
+            Cảm ơn Dudu ❤️
+        </h1>
+
+
+        <p class="finalMessage">
+
+            Cảm ơn bé đã đi đến tận đây. 💕
+
+            <br><br>
+
+            Bạn rất vui khi có thể đón tuổi mới cùng bé
+            Bạn cũng vui khi bạn người yêu như bé
+            Mong là sẽ có thật nhiều dịp sinh nhật 2 bọn mình gần nhau thế này.
+
+            <br><br>
+
+            Và cuối cùng...
+            bạn luôn muốn bé được vui vẻ và hạnh phúc
+            <br>
+            Chúc mừng sinh nhật em bé của bạn 
+
+        </p>
+
+
+        <!-- ẢNH CUỐI -->
+        <img
+            id="finalImage"
+            src="images/final.png"
+            alt="Món quà của Dudu"
+        >
+
+
+        <p class="finalLove">
+            Dudu ❤️ Bubu
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   GAME DATA
+========================= */
+
+const levels = [
+
+    /* =====================
+       LEVEL 1
+    ===================== */
+
+    {
+
+        question:
+            "ĐÂU LÀ GẤU TRÚC HOA HOA",
+        
+        reward: "images/reward1.png",
+        
+        message:
+            "Bé đã vượt qua câu 1 lời chúc đầu tiên bạn chúc bé tuổi mới thật xinh đẹp ❤️",
+
+        choices: [
+
+            {
+                image:
+                    "images/m1_flower.png",
+
+                correct:
+                    false
+            },
+
+            {
+                image:
+                    "images/m1_heart.png",
+
+                correct:
+                    true
+            },
+
+            {
+                image:
+                    "images/m1_star.png",
+
+                correct:
+                    false
+            }
+
+        ]
+
+    },
+
+
+    /* =====================
+       LEVEL 2
+    ===================== */
+
+    {
+
+        question:
+            "Alligator và Crocodile đều là cá sấu nhưng với những đặc điểm khác nhau, dưới đây là 2 con Alligator và 1 con Crocodile.Bé hãy chọn ra con Crocodile nhé",
+
+        reward: "images/reward2.png",
+
+        
+         message:
+              "Bé đã vượt qua câu 2 bạn chúc bé luôn vui vẻ  ❤️<br>"+
+             "Alligator mõm nó sẽ tròn còn Crocodile sẽ có một cái mõm nhọn bé nhé",
+
+
+        choices: [
+
+            {
+                image:
+                    "images/m2_sad.png",
+
+                correct:
+                    false
+            },
+
+            {
+                image:
+                    "images/m2_hug.png",
+
+                correct:
+                    true
+            },
+
+            {
+                image:
+                    "images/m2_sleep.png",
+
+                correct:
+                    false
+            }
+
+        ]
+
+    },
+
+
+    /* =====================
+       LEVEL 3
+    ===================== */
+
+    {
+
+        question:
+            "Chỉ có 1 chú Thơm ở đây thôi, bé tìm ra được không?",
+       
+        reward: "images/reward3.png",
+        message:
+          "Úi xờiiiiii, sai nữa thì chịu đấyyy :)))) <br>"+
+          "Chúc bé cũng thật GREENNNNNNN giống món quà nhé :)))", 
+
+
+        choices: [
+
+            {
+                image:
+                    "images/m3_money.png",
+
+                correct:
+                    false
+            },
+
+            {
+                image:
+                    "images/m3_smile.png",
+
+                correct:
+                    true
+            },
+
+            {
+                image:
+                    "images/m3_cake.png",
+
+                correct:
+                    false
+            }
+
+        ]
+
+    },
+
+
+    /* =====================
+       LEVEL 4
+    ===================== */
+
+    {
+
+        question:
+            "Orca là tên gọi của con vật nào dưới đây?",
+
+        reward: "images/reward4.png",
+        message:
+         " Chính xác. Hay còn gọi là cá voi sát thủ nhưng vẫn thuộc họ cá heo và nó là loài cá voi thông minh nhất đại dương<br>"+
+         "Nó cũng là đông vật bạn thích nhất, qua đó chúc em bé cũng thật thông minh giống nó ở câu số 4 này :))))))))",
+             
+
+        choices: [
+
+            {
+                image:
+                    "images/m4_gift.png",
+
+                correct:
+                    true
+            },
+
+            {
+                image:
+                    "images/m4_cloud.png",
+
+                correct:
+                    false
+            },
+
+            {
+                image:
+                    "images/m4_moon.png",
+
+                correct:
+                    false
+            }
+
+        ]
+
+    },
+
+
+    /* =====================
+       LEVEL 5
+    ===================== */
+
+    {
+
+        question:
+            "người Neanderthal được Yuval Noah Harari mô tả trong cuốn sách của ông là có dung tích não trung bình tương đương hoặc thậm chí lớn hơn một chút so với người hiện đại, nhưng cấu trúc hộp sọ và trán của họ dẹt hơn, bé hãy tìm xem người Neanderthal giống với hình nào nhất nhé?",
+         reward: "images/reward5.png",
+        
+         message:"Chính xác, bạn tặng bé cuốn sách về lược sử loài người để bé có thể hiểu rõ hơn nhé. Chúc bé đọc thật vuiii.",
+        choices: [
+
+            {
+                image:
+                    "images/m5_cake.png",
+
+                correct:
+                    false
+            },
+
+            {
+                image:
+                    "images/m5_present.png",
+
+                correct:
+                    true
+            },
+
+            {
+                image:
+                    "images/m5_flower.png",
+
+                correct:
+                    false
+            }
+
+        ]
+
+    },
+
+
+    /* =====================
+       LEVEL 6
+    ===================== */
+
+    {
+
+        question:
+            "Đất nước nào hình chiếc ủng??",
+      message: "Chính xác, sao bạn nhìn mãi mới ra cái ủng nhỉ :))))).",
+
+      
+        reward: "images/reward6.png",
+
+        choices: [
+
+            {
+                image:
+                    "images/m6_flower.png",
+
+                correct:
+                    false
+            },
+
+            {
+                image:
+                    "images/m6_hug.png",
+
+                correct:
+                    false
+            },
+
+            {
+                image:
+                    "images/m6_gift.png",
+
+                correct:
+                    true
+            }
+
+        ]
+
+    }
+
+];
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+const STEP = 4;
+
+
+let bubuX = 10;
+
+let bubuY = 75;
+
+
+let currentLevel = 0;
+let timeLeft = 20;
+let timerInterval = null;
+
+
+let gameStarted = false;
+
+let gamePaused = true;
+
+let duduActive = false;
+
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const startScreen =
+    document.getElementById(
+        "startScreen"
+    );
+
+
+const bubu =
+    document.getElementById(
+        "bubu"
+    );
+
+
+const dudu =
+    document.getElementById(
+        "dudu"
+    );
+
+
+const levelNumber =
+    document.getElementById(
+        "levelNumber"
+    );
+
+
+const questionText =
+    document.getElementById(
+        "questionText"
+    );
+
+
+const popup =
+    document.getElementById(
+        "popup"
+    );
+
+
+const popupIcon =
+    document.getElementById(
+        "popupIcon"
+    );
+
+
+const popupText =
+    document.getElementById(
+        "popupText"
+    );
+
+const rewardImage =
+    document.getElementById(
+        "rewardImage"
+    );
+
+
+const giftImage =
+    document.getElementById(
+        "giftImage"
+    );
+
+
+
+const continueButton =
+    document.getElementById(
+        "continueButton"
+    );
+
+
+const choices = [
+
+    document.getElementById(
+        "choice1"
+    ),
+
+    document.getElementById(
+        "choice2"
+    ),
+
+    document.getElementById(
+        "choice3"
+    )
+
+];
+
+
+/* ===================================
+   SOUNDS
+=================================== */
+
+const introSound = new Audio("sounds/intro.mp3");
+const startSound = new Audio("sounds/start.mp3");
+
+const moveSound = new Audio("sounds/move.mp3");
+const collectSound = new Audio("sounds/collect.mp3");
+const finalSound =
+    new Audio("sounds/final.mp3");
+
+finalSound.loop = true;
+finalSound.volume = 0.5;
+
+
+/* Nhạc intro lặp lại */
+
+introSound.loop = true;
+introSound.volume = 0.5;
+
+
+/* Nhạc game lặp lại */
+
+startSound.loop = true;
+startSound.volume = 0.5;
+
+
+/* ===================================
+   INTRO MUSIC
+=================================== */
+
+function playIntroMusic() {
+
+    introSound.play().catch((error) => {
+
+        console.log(
+            "Trình duyệt đang chặn autoplay:",
+            error
+        );
+
+    });
+
+
+}
+
+/* ===================================
+   MOVE SOUND
+=================================== */
+
+function playMoveSound() {
+
+    moveSound.currentTime = 0;
+
+    moveSound
+        .play()
+        .catch(() => {});
+
+}
+/* ===================================
+   BẮT ĐẦU INTRO KHI NGƯỜI DÙNG CHẠM
+=================================== */
+
+document.addEventListener("click", function introClick() {
+
+    const startScreen =
+        document.getElementById("startScreen");
+
+    if (
+        startScreen &&
+        startScreen.style.display !== "none"
+    ) {
+
+        playIntroMusic();
+
+    }
+
+}, { once: true });
+
+
+function playCollectSound() {
+
+    collectSound.currentTime = 0;
+
+    collectSound
+        .play()
+        .catch(() => {});
+
+}
+
+
+/* =========================
+   START
+========================= */
+function startTimer() {
+
+    clearInterval(timerInterval);
+
+    timeLeft = 20;
+
+    document.getElementById("timeLeft").textContent =
+        timeLeft;
+
+    document.getElementById("timer")
+        .classList.remove("timerDanger");
+
+
+    timerInterval = setInterval(function() {
+
+        if (gamePaused) {
+            return;
+        }
+
+        timeLeft--;
+
+        document.getElementById("timeLeft").textContent =
+            timeLeft;
+
+
+        if (timeLeft <= 5) {
+
+            document.getElementById("timer")
+                .classList.add("timerDanger");
+
+        }
+
+
+        if (timeLeft <= 0) {
+
+            clearInterval(timerInterval);
+
+            timeUp();
+
+        }
+
+    }, 1000);
+}
+
+function timeUp() {
+
+    gamePaused = true;
+
+    popupIcon.src =
+        "images/wrong.png";
+
+    popupIcon.style.display =
+        "block";
+
+    rewardImage.style.display =
+        "none";
+
+    popupText.innerHTML =
+        "⏰ Hết giờ rồi! 😝<br><br>" +
+        "<strong>Bubu thử lại màn này nhé ❤️</strong>";
+
+    continueButton.textContent =
+        "Chơi lại ❤️";
+
+    continueButton.onclick =
+        retryLevel;
+
+    popup.style.display =
+        "flex";
+}
+
+function retryLevel() {
+
+    popup.style.display =
+        "none";
+
+    gamePaused = false;
+
+    loadLevel();
+
+}
+
+
+
+function startGame() {
+  /* =========================
+       DỪNG NHẠC INTRO
+    ========================= */
+
+    introSound.pause();
+
+    introSound.currentTime = 0;
+
+
+    /* =========================
+       PHÁT NHẠC GAME
+    ========================= */
+
+    startSound.currentTime = 0;
+
+    startSound.play().catch((error) => {
+
+        console.log(
+            "Không thể phát start.mp3:",
+            error
+        );
+
+    });
+
+
+    /* =========================
+       ẨN START SCREEN
+    ========================= */
+
+    document.getElementById(
+        "startScreen"
+    ).style.display = "none";
+
+  /* =========================
+       BẮT ĐẦU GAME
+    ========================= */
+    
+    gameStarted = true;
+
+    gamePaused = false;
+
+    currentLevel = 0;
+
+
+    startScreen.style.display =
+        "none";
+
+
+    bubuX = 10;
+
+    bubuY = 75;
+
+
+    duduActive = false;
+
+    dudu.style.display =
+        "none";
+
+
+    updateBubu();
+
+    loadLevel();
+
+}
+
+
+/* =========================
+   LOAD LEVEL
+========================= */
+
+function loadLevel() {
+
+    const level =
+        levels[currentLevel];
+
+
+    /*
+       Cập nhật số màn
+    */
+
+    levelNumber.textContent =
+        currentLevel + 1;
+
+
+    /*
+       Cập nhật câu hỏi
+    */
+
+    questionText.textContent =
+        level.question;
+
+
+    /*
+       Cập nhật 3 ảnh
+    */
+
+    choices.forEach(
+        (choice, index) => {
+
+            choice.src =
+                level.choices[index].image;
+
+            choice.style.display =
+                "block";
+
+        }
+    );
+
+
+    /*
+       Đưa Bubu về vị trí
+       ban đầu mỗi màn
+    */
+
+    bubuX = 10;
+
+    bubuY = 75;
+
+
+    updateBubu();
+
+
+    gamePaused = false;
+startTimer();
+
+}
+
+
+/* =========================
+   UPDATE BUBU
+========================= */
+
+function updateBubu() {
+
+    bubu.style.left =
+        bubuX + "%";
+
+
+    bubu.style.top =
+        bubuY + "%";
+
+}
+
+
+/* =========================
+   MOVE
+========================= */
+
+function move(direction) {
+
+    if (!gameStarted) {
+
+        return;
+
+    }
+
+
+    if (gamePaused) {
+
+        return;
+
+    }
+
+
+    if (duduActive) {
+
+        return;
+
+    }
+
+
+    if (
+        direction === "up"
+    ) {
+
+        bubuY -= STEP;
+
+    }
+
+
+    if (
+        direction === "down"
+    ) {
+
+        bubuY += STEP;
+
+    }
+
+
+    if (
+        direction === "left"
+    ) {
+
+        bubuX -= STEP;
+
+    }
+
+
+    if (
+        direction === "right"
+    ) {
+
+        bubuX += STEP;
+
+    }
+
+
+    /*
+       Giới hạn bản đồ
+    */
+
+    bubuX =
+        Math.max(
+            2,
+            Math.min(
+                92,
+                bubuX
+            )
+        );
+
+
+    bubuY =
+        Math.max(
+            18,
+            Math.min(
+                88,
+                bubuY
+            )
+        );
+
+
+    updateBubu();
+
+
+    playMoveSound();
+
+
+    checkChoiceCollision();
+
+}
+
+
+/* =========================
+   CHECK CHOICE
+========================= */
+
+function checkChoiceCollision() {
+
+    const level =
+        levels[currentLevel];
+
+
+    for (
+        let i = 0;
+        i < choices.length;
+        i++
+    ) {
+
+
+        const choice =
+            choices[i];
+
+
+        if (
+            choice.style.display ===
+            "none"
+        ) {
+
+            continue;
+
+        }
+
+
+        const bubuRect =
+            bubu.getBoundingClientRect();
+
+
+        const choiceRect =
+            choice.getBoundingClientRect();
+
+
+        const bubuCenterX =
+            bubuRect.left +
+            bubuRect.width / 2;
+
+
+        const bubuCenterY =
+            bubuRect.top +
+            bubuRect.height / 2;
+
+
+        const choiceCenterX =
+            choiceRect.left +
+            choiceRect.width / 2;
+
+
+        const choiceCenterY =
+            choiceRect.top +
+            choiceRect.height / 2;
+
+
+        const distance =
+            Math.hypot(
+
+                bubuCenterX -
+                choiceCenterX,
+
+                bubuCenterY -
+                choiceCenterY
+
+            );
+
+
+        if (
+            distance < 55
+        ) {
+
+            chooseAnswer(
+                i
+            );
+
+            return;
+
+        }
+
+    }
+
+}
+
+
+/* =========================
+   ANSWER
+========================= */
+
+function chooseAnswer(index) {
+
+    if (gamePaused) {
+        return;
+    }
+
+    gamePaused = true;
+
+
+    const level =
+        levels[currentLevel];
+
+
+    const selected =
+        level.choices[index];
+
+
+    playCollectSound();
+
+
+    /* =========================
+       ẨN ẢNH CŨ
+    ========================= */
+
+    rewardImage.style.display =
+        "none";
+
+    giftImage.style.display =
+        "none";
+
+
+    /* =========================
+       ĐÁP ÁN ĐÚNG
+    ========================= */
+
+    if (selected.correct) {
+
+        /*
+           Ảnh thông báo đúng
+        */
+
+        popupIcon.src =
+            "images/correct.png";
+
+        popupIcon.style.display =
+            "block";
+
+
+        /*
+           Nội dung
+        */
+
+        popupText.innerHTML =
+            " Đúng rồi! ❤️<br><br>" +
+           "<div class='correctTitle'>" +
+        "Bé giỏi quá!" +
+    "</div>" +
+
+    "<div class='wishMessage'>" +
+        level.message +
+    "</div>";
+
+
+        /*
+           Reward riêng của màn này
+        */
+
+        rewardImage.src =
+            level.reward;
+
+
+        rewardImage.style.display =
+            "block";
+
+
+        /*
+           Thêm dòng bên dưới
+        */
+
+        popupText.innerHTML +=
+            "<br><br>" +
+            "Đây là phần thưởng của bé 🎁";
+
+    }
+
+
+    /* =========================
+       ĐÁP ÁN SAI
+    ========================= */
+
+    else {
+
+        /*
+           Ảnh riêng khi sai
+        */
+
+        popupIcon.src =
+            "images/wrong.png";
+
+        popupIcon.style.display =
+            "block";
+
+
+        popupText.innerHTML =
+            "Bé sai rồiiiii! 😝❤️<br><br>" +
+            "<strong>Không sao đâu!</strong><br>" +
+            "Bé vẫn có thể tiếp tục hành trình để nhận quà. 💕";
+
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    continueButton.textContent =
+        currentLevel === 5
+            ? "Tiếp tục ❤️"
+            : "Sang màn tiếp theo ❤️";
+
+
+    continueButton.onclick =
+        nextLevel;
+
+
+    popup.style.display =
+        "flex";
+}
+
+/* =========================
+   NEXT LEVEL
+========================= */
+
+function nextLevel() {
+
+    popup.style.display =
+        "none";
+
+
+    /*
+       Nếu chưa tới màn 6
+    */
+
+    if (
+        currentLevel < 5
+    ) {
+
+        currentLevel++;
+
+
+        loadLevel();
+
+
+        return;
+
+    }
+
+
+    /*
+       Đã hoàn thành 6 màn
+    */
+
+    startDuduScene();
+
+}
+
+
+/* =========================
+   DUDU
+========================= */
+
+function startDuduScene() {
+
+    duduActive = true;
+
+    gamePaused = true;
+
+
+    /*
+       Ẩn 3 ảnh
+    */
+
+    choices.forEach(
+        choice => {
+
+            choice.style.display =
+                "none";
+
+        }
+    );
+
+
+    /*
+       Dudu xuất hiện
+    */
+
+    dudu.style.display =
+        "block";
+
+
+    dudu.style.left =
+        "80%";
+
+
+    dudu.style.top =
+        "15%";
+
+
+    /*
+       Dudu đi tới Bubu
+    */
+
+    setTimeout(
+        () => {
+
+            dudu.style.left =
+                bubuX + "%";
+
+
+            dudu.style.top =
+                bubuY + "%";
+
+
+            setTimeout(
+                () => {
+
+                    showGiftPopup();
+
+                },
+                1700
+            );
+
+        },
+        500
+    );
+
+}
+
+
+/* =========================
+   GIFT POPUP
+========================= */
+
+function showGiftPopup() {
+
+    popup.style.display =
+        "flex";
+
+
+    popupIcon.style.display =
+        "block";
+
+
+    popupIcon.src =
+        "images/giftpopup.png";
+
+
+    popupText.textContent =
+        "Bé đã hoàn thành cả 6 màn rồi! ❤️\n\nBạn có một món quà cuối cùng muốn tặng Bé... 🎁";
+
+
+    giftImage.style.display =
+        "none";
+
+
+    continueButton.textContent =
+        "Nhận quà ❤️";
+
+
+    continueButton.onclick =
+        showGift;
+
+}
+
+
+/* =========================
+   SHOW GIFT
+========================= */
+
+function showGift() {
+
+    popupIcon.style.display =
+        "none";
+
+
+    popupText.textContent =
+        "Đây là món quà cuối cùng mà bạn đã chuẩn bị cho bé ❤️";
+
+
+    giftImage.style.display =
+        "block";
+
+
+    continueButton.textContent =
+        "Yêu người yêu thíiiiiiiiii ❤️";
+
+
+    continueButton.onclick =
+        showFinalScreen;
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+function showFinalScreen() {
+
+    popup.style.display =
+        "none";
+/* Dừng nhạc game */
+
+    startSound.pause();
+
+    startSound.currentTime = 0;
+
+
+    /* Phát nhạc trang cuối */
+
+    finalSound.currentTime = 0;
+
+    finalSound.play().catch(() => {});
+
+
+    document.getElementById(
+        "finalScreen"
+    ).style.display =
+        "flex";
+
+}
+
+
+/* =========================
+   KEYBOARD
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+
+        if (
+            event.key === "ArrowUp" ||
+            event.key.toLowerCase() === "w"
+        ) {
+
+            move("up");
+
+        }
+
+
+        if (
+            event.key === "ArrowDown" ||
+            event.key.toLowerCase() === "s"
+        ) {
+
+            move("down");
+
+        }
+
+
+        if (
+            event.key === "ArrowLeft" ||
+            event.key.toLowerCase() === "a"
+        ) {
+
+            move("left");
+
+        }
+
+
+        if (
+            event.key === "ArrowRight" ||
+            event.key.toLowerCase() === "d"
+        ) {
+
+            move("right");
+
+        }
+
+    }
+);
+
+
+/* =========================
+   INITIAL
+========================= */
+
+updateBubu();
+
+
+</script>
+
+</body>
+
+</html>
